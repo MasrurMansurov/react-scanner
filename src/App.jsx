@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Html5QrcodeScanner } from "html5-qrcode";
 
 const App = () => {
-  const [result, setResult] = useState("—");
+  const [result, setResult] = useState("Нет сканера.");
   const scannerRef = useRef(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const App = () => {
   }, []);
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div>
       <h3>Сканируйте штрихкод:</h3>
       <div id="reader" ref={scannerRef} style={{ width: 300 }}></div>
       <div>
